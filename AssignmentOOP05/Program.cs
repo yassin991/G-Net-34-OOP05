@@ -13,7 +13,7 @@ namespace AssignmentOOP05
     {
         static void Main(string[] args)
         {
-            #region Q1
+        #region Q1
             //        Q1: What is an interface in C#?  
             //            An interface in C# is a reference type that defines a contract.
             //It contains method signatures, properties, events, or indexers without implementation(by default).
@@ -71,10 +71,40 @@ namespace AssignmentOOP05
             //Data corruption
             //Bugs that are hard to detect 
             #endregion
+            #region Q4
+            //Q4: Look at the following code and determine the output.Explain why.
+
+//class Department { public string Name; }
+//        class Employee
+//        {
+//            public string Title;
+//            public Department Dept;
+//            public Employee ShallowCopy() => (Employee)this.MemberwiseClone();
+//        }
+
+//        var e1 = new Employee { Title = "Dev", Dept = new Department { Name = "IT" } };
+//        var e2 = e1.ShallowCopy();
+//        e2.Title = "QA";
+//e2.Dept.Name = "Testing";
+
+//Console.WriteLine($"{e1.Title} - {e1.Dept.Name}");
+//Console.WriteLine($"{e2.Title} - {e2.Dept.Name}");
+
+//Output
+//Dev - Testing
+//QA - Testing
+
+//            Why?
+//Because:
+//Title is copied independently → changing e2.Title does NOT affect e1.Title.
+
+//Dept is a reference type → shallow copy copies the reference → both objects share the same Department instance.
 
 
 
 
-        }
+        #endregion
+
     }
+}
 }
