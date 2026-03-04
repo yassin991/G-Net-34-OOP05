@@ -1,5 +1,7 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Diagnostics.Metrics;
+using System.Net;
 using System.Security.AccessControl;
 using System.Threading;
 using System.Xml.Linq;
@@ -46,6 +48,32 @@ namespace AssignmentOOP05
             // No, you cannot.
             //Because explicit interface methods are not accessible through the class type directly 
             #endregion
+            #region Q3
+            //            3: Difference Between Shallow Copy and Deep Copy
+            // 1) What is a Shallow Copy?
+            //A shallow copy creates a new object, but copies the references of reference-type fields instead of creating new objects.
+            //            Value types  copied normally
+            //Reference types  only the reference is copied
+
+
+            //    2) What is a Deep Copy?
+            //A deep copy creates a completely new object and also creates new copies of all reference - type fields.
+            //Value types → copied
+            //Reference types → new separate objects are created
+
+
+
+            //Risk of Using Shallow Copy
+            //If the object has reference - type fields, both copies will share the same referenced object.
+
+            //Risk:
+            //Unexpected side effects
+            //Data corruption
+            //Bugs that are hard to detect 
+            #endregion
+
+
+
 
         }
     }
